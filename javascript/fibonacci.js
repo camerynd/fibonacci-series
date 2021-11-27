@@ -1,9 +1,17 @@
 function fibonacci(num) {
-  // type your code here
+  var f = 0
+  const arr = [0, 1]
+  for (var i = 1; i < num; i++) {
+    f = arr[i]
+    arr.push(f + arr[i - 1])
+    f++
+  }
+  let last = arr[num];
+  return(last)
 }
 
 if (require.main === module) {
-  // add your own tests in here
+
   console.log("Expecting: 0");
   console.log("=>", fibonacci(0));
 
@@ -20,5 +28,4 @@ if (require.main === module) {
 
 module.exports = fibonacci;
 
-// Please add your pseudocode to this file
-// And a written explanation of your solution
+
